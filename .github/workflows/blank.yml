@@ -33,6 +33,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      - run: npm ci
       - run: node -v
       # Runs a single command using the runners shell
       - name: Run a one-line script
