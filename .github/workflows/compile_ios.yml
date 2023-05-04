@@ -3,7 +3,7 @@ name: Main
 
 on:
   push:
-    branches: ["test"]
+    branches: ["COMPILE_IOS"]
 
 jobs:
   build:
