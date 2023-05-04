@@ -11,13 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - name: Paso 1
-        run: |
-          echo "PWD: "
-          pwd
-          echo "RUNNER_TEMP:  $RUNNER_TEMP"
-      - name: Paso 2
-        run: |
-          echo "algo akgo"
+      - run: echo "Hola mundo"
+      - run: echo "Hola mundo2"
 
       
