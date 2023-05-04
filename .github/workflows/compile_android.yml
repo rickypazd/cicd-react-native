@@ -7,18 +7,17 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  analyce:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      # Cargmos los secrets
-      - name: Test variables y secrets
+      - name: Paso 1
         run: |
-          # create variables
           echo "PWD: "
           pwd
           echo "RUNNER_TEMP:  $RUNNER_TEMP"
-          echo "XCode Version:"
+      - name: Paso 2
+        run: |
+          echo "algo akgo"
 
-      # NODE Y COMPILACION
       
