@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Test
+
+on:
+  push:
+    branches: ["test"]
+
+jobs:
+  build:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+      # Cargmos los secrets
+      - name: Test variables y secrets
+        run: |
+          # create variables
+          echo "PWD: "
+          pwd
+          echo "RUNNER_TEMP:  $RUNNER_TEMP"
+          echo "XCode Version:"
+          /Applications/Xcode_14.2.app/Contents/Developer/usr/bin/xcodebuild  -version
+
+      # NODE Y COMPILACION
+      

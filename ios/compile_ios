@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild \
+                    -workspace calistenia_rs_app.xcworkspace \
+                    -scheme calistenia_rs_app \
+                    clean archive \
+                    -archivePath "Actions" \
+                    -configuration "Release"  
+
+# RUNNER_TEMP="/Users/rickypazd/Documents/GitHub/CalisteniaBolivia-SRL/calistenia-app-red-social/ios/Actions.xcarchive"
+
+GITHUB_WORKSPACE="/Users/rickypazd/Documents/GitHub/CalisteniaBolivia-SRL/calistenia-app-red-social/ios/Actions.xcarchive"
+EXPORT_PLIST_PATH=$RUNNER_TEMP/ExportOptions.plist
