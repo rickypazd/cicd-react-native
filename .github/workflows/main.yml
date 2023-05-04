@@ -3,7 +3,7 @@ name: Main
 
 on:
   push:
-    branches: ["main"]
+    branches: ["develop"]
 
 jobs:
   build:
@@ -98,12 +98,12 @@ jobs:
           echo "Start upload"
           ls $API_PRIVATE_KEYS_DIR
 
-          xcrun altool --validate-app -f $RUNNER_TEMP/export/movies.ipa \
+          xcrun altool --validate-app -f $RUNNER_TEMP/export/calistenia_rs_app.ipa \
                 -t ios \
                 --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} \
                 --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }}
                 
-          xcrun altool --upload-app -f $RUNNER_TEMP/export/movies.ipa \
+          xcrun altool --upload-app -f $RUNNER_TEMP/export/calistenia_rs_app.ipa \
                 -t ios \
                 --apiKey ${{ secrets.APPSTORE_API_KEY_ID }} \
                 --apiIssuer ${{ secrets.APPSTORE_ISSUER_ID }}
